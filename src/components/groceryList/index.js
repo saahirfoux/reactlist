@@ -19,7 +19,7 @@ const GroceryList = ({items, onChange}) => {
     }
 
     useEffect(() => {
-        console.log('changed')
+        onChange();
     }, [items]);
 
     
