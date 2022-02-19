@@ -1,9 +1,9 @@
 import React from 'react';
 
-const SaveButton = () => {
+const SaveButton = ({onClick}) => {
     return (
     <>
-        <button>Save</button>
+        <button onClick={onClick}>Save</button>
     </>)
 }
 

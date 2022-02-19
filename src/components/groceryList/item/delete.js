@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 
-const DeleteButton = () => {
+const DeleteButton = ({onClick}) => {
     return (
     <>
-        <button>Delete</button>
+        <button onClick={onClick}>Delete</button>
     </>)
 }
 
