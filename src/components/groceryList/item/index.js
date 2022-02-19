@@ -6,7 +6,6 @@ import DeleteButton from './delete';
 const Item = ({item, model, setModel}) => {
     let [editMode, setEditMode] = useState(false);
     let [newName, setNewName] = useState('');
-
     const handleEdit = () => {
         setEditMode(!editMode);
     };
@@ -15,6 +14,7 @@ const Item = ({item, model, setModel}) => {
             if (current.id === item.id) {
                 current.name = newName;
             }
+            return current;
         })
     }
     const removeItem = () => {

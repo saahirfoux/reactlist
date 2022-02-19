@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 
-const EditButton = () => {
+const EditButton = ({onClick}) => {
     return (
     <>
-        <button>Edit</button>
+        <button onClick={onClick}>Edit</button>
     </>)
 }
 

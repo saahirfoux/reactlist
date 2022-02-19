@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import Item from './item';
 
 const GroceryList = ({items, onChange}) => {
-    console.log(items, 'The items');
     let [model, setModel] = useState(items); 
     let [name, setItemName] = useState('');
 
@@ -25,7 +24,7 @@ const GroceryList = ({items, onChange}) => {
     
 
     if (!model.length) {
-        return (<>Please choose one or more items</>)
+        return (<>Please add one or more items<br/> <button onClick={handleAdd}>Add</button></>)
     }
 
     return (
@@ -33,7 +32,7 @@ const GroceryList = ({items, onChange}) => {
         {model.map((item, index) => (
             <Item item={item} model={model} setModel={setModel} />
         ))}
-        <input value={name} onChange={handleFieldChange} placeholder={'Add a new item for dinner'}/>
+        <input value={name} onChange={handleFieldChange} placeholder={'Add item'}/>
         <button onClick={handleAdd}>Add</button>
     </>)
 }
